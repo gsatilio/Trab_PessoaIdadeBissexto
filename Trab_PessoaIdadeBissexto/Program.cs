@@ -30,7 +30,7 @@ internal class Program
     }
     static void retornarDados(Pessoa p)
     {
-        int idade = 0, ano = 0, idadeaux = 0, anonascimento = 0;
+        int idade = 0, idadeaux = 0, anonascimento = 0;
         Console.WriteLine("Nome: " + p.getNome());
         Console.WriteLine("Idade: " + p.getIdade());
         Console.WriteLine("Profissão: " + p.getProfissao());
