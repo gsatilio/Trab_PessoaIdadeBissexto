@@ -5,13 +5,34 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Pessoa p1 = criarPessoa();
-        Pessoa p2 = criarPessoa();
-        Pessoa p3 = criarPessoa();
+        int opc = -1;
+        PilhaPessoa pilha = new PilhaPessoa();
+        do
+        {
+            Console.WriteLine("1 - Criar Pessoa e inserir na Pilha");
+            Console.WriteLine("2 - Retornar resultados da Pilha");
+            opc = int.Parse(Console.ReadLine());
+            switch(opc)
+            {
+                case 0:
+                    Console.WriteLine("Finalizando programa");
+                    Console.ReadKey();
+                    break;
+                case 1:
+                    pilha.push(criarPessoa());
+                    break;
+                case 2:
+                    Console.WriteLine(pilha.print());
+                    Console.WriteLine("Pressione qualquer tecla para continuar...");
+                    Console.ReadKey();
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida");
+                    Console.ReadKey();
+                    break;
 
-        retornarDados(p1);
-        retornarDados(p2);
-        retornarDados(p3);
+            }
+        } while (opc != 0);
     }
     static Pessoa criarPessoa()
     {
